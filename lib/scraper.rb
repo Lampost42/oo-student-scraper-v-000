@@ -25,7 +25,8 @@ class Scraper
       student[:blog] = link if link.include?("learn")
     end
     student[:profile_quote] = doc.css(".profile_quote").text
-    student[:bio] = doc.css()
+    student[:bio] = doc.css(".description_holder p").text
+    student
   end
 end
 
