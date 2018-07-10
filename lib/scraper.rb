@@ -10,7 +10,6 @@ class Scraper
     students_doc = doc.css(".roster-cards-container")
     student_list = students_doc.css(".student-card").map{|e| e}
     student_list.each {|student| students << {:name => student.css("h4").text, :location => student.css("p").text, :profile_url => student.css("a").attr("href").value}}
-    students = doc.css.map(|e| e == "div")
     students
   end
 
