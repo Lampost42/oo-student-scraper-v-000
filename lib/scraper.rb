@@ -20,7 +20,7 @@ class Scraper
     link_list = social_container.css('a').attr('href').value.map{|e| e}
     link_list.each do |link|
       if link.include?("twitter")
-        student(:twitter) => link
+        student(:twitter) = link
   end
 end
 
