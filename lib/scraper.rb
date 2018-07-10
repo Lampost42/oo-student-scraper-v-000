@@ -19,9 +19,9 @@ class Scraper
     social_container = doc.css(".social-icon-container")
     link_list = social_container.css('a').attr('href').value.map{|e| e}
     link_list.each do |link|
-      if link.include?("twitter")
-        student[:twitter] = link
-      elsif 
+      student[:twitter] = link if link.include?("twitter")
+      student[:linkedin] = link if link.include?("linkedin")
+      student[:github] = link if link.include?("github")
   end
 end
 
