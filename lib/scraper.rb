@@ -24,7 +24,8 @@ class Scraper
       student[:github] = link if link.include?("github")
       student[:blog] = link if link.include?("learn")
     end
-    
+    student[:profile_quote] = doc.css(".profile_quote").text
+    student[:bio] = doc.css()
   end
 end
 
